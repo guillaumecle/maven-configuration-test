@@ -17,19 +17,21 @@
 	</modules>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<version>3.0.0</version>
-				<configuration>
-					<executable>echo</executable>
-					<arguments>
-						<argument>hello world</argument>
-						<argument>${project.packaging}</argument>
-					</arguments>
-				</configuration>
-			</plugin>
-		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>3.0.0</version>
+					<configuration>
+						<executable>echo</executable>
+						<arguments>
+							<argument>hello world</argument>
+							<argument>${project.packaging}</argument>
+						</arguments>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
 </project>
