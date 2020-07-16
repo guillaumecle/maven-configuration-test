@@ -1,0 +1,35 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>bzh.guillaume</groupId>
+		<artifactId>test-cli-grand-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>grand-parent</relativePath>
+	</parent>
+
+	<artifactId>test-cli-parent</artifactId>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>grand-parent</module>
+		<module>module1</module>
+	</modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<executable>echo</executable>
+					<arguments>
+						<argument>hello world</argument>
+						<argument>${project.packaging}</argument>
+					</arguments>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

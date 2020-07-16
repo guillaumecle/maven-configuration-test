@@ -1,0 +1,11 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>bzh.guillaume</groupId>
+		<artifactId>test-cli-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>test-cli-module1</artifactId>
+</project>
